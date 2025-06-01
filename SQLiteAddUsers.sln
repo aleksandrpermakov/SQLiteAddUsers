@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteAddUsers", "SQLiteAddUsers\SQLiteAddUsers.csproj", "{691F0209-6F28-4D1C-A30D-FBF4819C8E8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteAddTime", "SQLiteAddUsers\SQLiteAddTime.csproj", "{691F0209-6F28-4D1C-A30D-FBF4819C8E8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

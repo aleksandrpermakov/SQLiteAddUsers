@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-namespace SQLiteAddUsers
+namespace SQLiteAddTime
 {
     internal class DBWorkers
     {
@@ -14,10 +14,9 @@ namespace SQLiteAddUsers
         public DBWorkers(string filename)
         {
             this.db_name = filename;
-            init_db = "CREATE TABLE IF NOT EXISTS Users (id INTEGER PRIMARY KEY AUTOINCREMENT," +
+            init_db = "CREATE TABLE IF NOT EXISTS Time (id INTEGER PRIMARY KEY AUTOINCREMENT," +
                       "name VARCHAR NOT NULL," +
-                      "age INTEGER NOT NULL," +
-                      "hello VARCHAR);";
+                      "comment VARCHAR NOT NULL;";
             using (SQLiteConnection conn = new SQLiteConnection($"Data Source ={db_name};"))
             {
                 conn.Open();
@@ -26,9 +25,10 @@ namespace SQLiteAddUsers
                 cmd.ExecuteNonQuery();
             }
         }
-        public void AddData(string name, int age)
+        
+        public void AddDataTime(string time, string comment)
         {
-            string query = $"INSERT INTO Users (name, age) VALUES ('{name}', {age});";
+            string query = $"INSERT INTO Users (name, age) VALUES ('{time}', {comment});";
             using (SQLiteConnection conn = new SQLiteConnection($"Data Source ={db_name};"))
             {
                 conn.Open();
@@ -37,5 +37,6 @@ namespace SQLiteAddUsers
                 cmd.ExecuteNonQuery();
             }
         }
+
     }
 }

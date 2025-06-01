@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SQLiteAddUsers
+namespace SQLiteAddTime
 {
     internal class FSWorker
     {
